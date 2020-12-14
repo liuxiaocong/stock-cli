@@ -1,0 +1,16 @@
+{
+  "name": "stock-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:liuxiaocong/stock-cli.git",
+  "author": "Evan Liu <evan.liu@shopee.com>",
+  "license": "MIT",
+  "bin": {
+    "stock": "./src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "iconv-lite": "^0.6.2",
+    "minimist": "^1.2.5"
+  }
+}
