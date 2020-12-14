@@ -2,9 +2,21 @@
 const minimist = require("minimist");
 const axios = require("axios");
 const iconv = require("iconv-lite");
+const showError = ()=>{
+  console.error('Input error, please follow format') 
+  console.log('\x1b[31m%s\x1b[0m','stock 601003,000001,300725,688029');
+}
+if(!process.argv || !process.argv.slice){
+  showError();
+  return;
+}
 const args = minimist(process.argv.slice(2));
 if (args && args["_"]) {
   const org = args["_"][0];
+  if(!org){
+    showError();
+    return;
+  }
   const orgArr = org.split(",");
   const postArr = [];
   const varArr = [];
